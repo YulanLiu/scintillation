@@ -1,6 +1,6 @@
 # # Remove RFI
 python clean.py files
-# (1)adding "-plot" can plot the dynamic have been remove RFI
+# (1)adding "-plot" can plot the dynamic have been remove RFI. eg:
 python clean.py -plot files 
 
 # #scintillation
@@ -11,3 +11,7 @@ python scin.py files
 # (4) -plot, --plot        plot the dynamic spectrum, ACF and secendary. Options: all, dysp, acf, sec
 # (5) -s, --savefigure     save the dysp
 # (6) -q, --quiet          Do not print text information.
+
+
+# # combine files into one dynamic spectrum. there have to use txt files or exsist txt files
+python combine.py files
