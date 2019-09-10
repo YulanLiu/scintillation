@@ -1,5 +1,13 @@
-# scintillation
-# First,we should remove RFI
+# # Remove RFI
 python clean.py files
-# adding "-plot" can plot the dynamic have been remove RFI
+# (1)adding "-plot" can plot the dynamic have been remove RFI
 python clean.py -plot files 
+
+# #scintillation
+python scin.py files
+# (1) -h, --help            show this help message and exit
+# (2)  -fill, --fillempty   fill the empty place where the RFI had been removed
+# (3) -end , --endmethod    There have two methods to find the best end, one of the them is from lars(0), the other is useing the slope rate of ACF(1)
+# (4)-plot, --plot          plot the dynamic spectrum, ACF and secendary. Options: all, dysp, acf, sec
+# -s, --savefigure          save the dysp
+# -q, --quiet               Do not print text information.
