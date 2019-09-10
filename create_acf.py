@@ -125,7 +125,7 @@ def findend_slo(middle_f, middle_t,midACF_freq, midACF_time, args,intensity):
         return b*x+c
     try:
         endf=[]
-        span_f=6
+        span_f = int (middle_f/20)
         for i in np.arange(middle_f-span_f-1):
             xcoor_f=np.linspace(i,span_f+i-1,span_f)
             ycoor_f=np.copy(midACF_freq)[int(middle_f+i):int(middle_f+span_f+i)]
@@ -146,7 +146,7 @@ def findend_slo(middle_f, middle_t,midACF_freq, midACF_time, args,intensity):
    
 
     try:
-        span_t=5
+        span_t = int(middle_t/10)
         endt=[]
         for i in np.arange(middle_t-span_t-1):
             xcoor_t=np.linspace(i,span_t+i-1,span_t)
